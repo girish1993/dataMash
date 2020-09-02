@@ -18,9 +18,12 @@
         "2",
         "13",
         "7",
-        "10",
+        "8",
         "13",
         "20",
         "13"
-    ]
+    ],
+    "IncludeHeader":"True",
+    "FixedWidthEncoding": "windows-1252",
+    "DelimitedEncoding": "utf-8"
 }
