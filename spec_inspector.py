@@ -61,7 +61,7 @@ def check_spec_file_fields(spec_data):
     flag = True
     expected_list_of_fields = ['ColumnNames', 'Offsets', 'FixedWidthEncoding',
                                'IncludeHeader', 'DelimitedEncoding']
-    if (set(spec_data.keys()) == set(expected_list_of_fields)) or (set(spec_data.keys()).intersection(set(expected_list_of_fields)) == set(['ColumnNames', 'Offsets'])):
+    if (set(spec_data.keys()).issubset(set(expected_list_of_fields))) or (set(spec_data.keys()).intersection(set(expected_list_of_fields)) == set(['ColumnNames', 'Offsets'])):
         print("The spec file has all the expected attributes. Proceeding with further processing..")
     else:
         raise AttributeError("The provided spec file does not have the necessary attributes for further processing.")
@@ -120,5 +120,3 @@ def get_int_offset_values(offset_values):
     """
     
     return [int(each_value) for each_value in offset_values]
-
-spec_data = read_spec_file("spec.json")
