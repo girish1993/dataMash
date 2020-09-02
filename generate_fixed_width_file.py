@@ -2,7 +2,6 @@
 
 import random
 import string
-import spec_inspector
 import sys
 
 
@@ -198,7 +197,7 @@ class Generate_Fixed_Width_File:
         random_content = []
         content_to_be_written_to_file = []
         
-        if self.get_include_header().lower() == "True":                        
+        if self.get_include_header().lower() == "true":                        
             header_str = "".join("%*s" % i for i in zip(tuple(offset_values),tuple(column_values)))
             content_to_be_written_to_file.append(header_str)
         
