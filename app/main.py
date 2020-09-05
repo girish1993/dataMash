@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-from spec_inspector import Inspect_file
-from generate_fixed_width_file import Generate_Fixed_Width_File
-from file_parser import Parse_File
+from file_generator.spec_inspector import Inspect_file
+from file_generator.generate_fixed_width_file import Generate_Fixed_Width_File
+from file_parser.file_parser import Parse_File
 
 if __name__== "__main__":
     print("Stage 1 : Reading the specifcation file ...")
@@ -15,5 +15,5 @@ if __name__== "__main__":
     
     print("Stage 3: Parsing the fixed width file and writing to csv ")
     p = Parse_File(spec_data)
-    p.read_file_by_line('my_data.fwf')
+    p.read_file_by_line('data/generated_input/my_data.fwf')
     p.slice_by_offsets()
