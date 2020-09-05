@@ -9,7 +9,7 @@ import sys
 class Parse_File:
     KEY_OFFSET_VALUES = "Offsets"
     KEY_COLUMN_NAMES = "ColumnNames"
-    FILE_PATH = "my_data.csv"
+    FILE_PATH = "data/parsed_output/my_data.csv"
     KEY_DELIMITED_ENCODING = "DelimitedEncoding"
     
     content = None

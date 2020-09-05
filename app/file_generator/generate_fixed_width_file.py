@@ -12,6 +12,7 @@ class Generate_Fixed_Width_File:
     KEY_OFFSET_VALUES = "Offsets"
     KEY_ENCODING_TYPE = "FixedWidthEncoding"
     KEY_INCLUDE_HEADER = "IncludeHeader"
+    FILE_PATH = "data/generated_input/my_data.fwf"
     
     #instance variables to hold the values.
     spec_data = None
@@ -230,6 +231,6 @@ class Generate_Fixed_Width_File:
 
         """
         
-        with open("my_data.fwf",'w',encoding=self.get_encoding_type()) as f:
+        with open(self.FILE_PATH,'w',encoding=self.get_encoding_type()) as f:
             for item in content:
                 f.write("%s\n" % item)
